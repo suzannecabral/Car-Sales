@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 //remove---------
 //original props:
 // additionalFeatures={state.additionalFeatures}
+
 const AdditionalFeatures = props => {
   return (
     <div className="content">
