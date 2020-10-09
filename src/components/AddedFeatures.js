@@ -4,7 +4,7 @@ import AddedFeature from './AddedFeature';
 
 import { connect } from "react-redux";
 
-
+//remove---------
 //original props:
 //car={state.car} 
 

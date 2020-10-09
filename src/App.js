@@ -5,13 +5,15 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
-//Remove this once redux works:
+//remove---------
 // //making reducer
 // import { useReducer } from "react";
 // import { initialState, reducer } from "./components/reducers/carReducer.js";
 
 
 const App = () => {
+
+  //remove---------
   // const state = {
   //   additionalPrice: 0,
   //   car: {
@@ -29,7 +31,7 @@ const App = () => {
   //   ]
   // };
 
-  //Remove this once redux works:
+  //remove---------
   // //useReducer -----------------------
   // const [state, dispatch] = useReducer(reducer, initialState);
 

@@ -3,7 +3,7 @@ import AdditionalFeature from './AdditionalFeature';
 
 import { connect } from "react-redux";
 
-
+//remove---------
 //original props:
 // additionalFeatures={state.additionalFeatures}
 const AdditionalFeatures = props => {

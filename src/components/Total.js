@@ -2,6 +2,7 @@ import React from 'react';
 
 import { connect } from "react-redux";
 
+//remove---------
 //original props:
 // car={state.car} 
 // additionalPrice={state.additionalPrice} 
