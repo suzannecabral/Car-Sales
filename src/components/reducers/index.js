@@ -1,4 +1,4 @@
-import { CLICK_ADD } from "../actions/index.js";
+import { CLICK_ADD, CLICK_DELETE } from "../actions"
 
 
 const initialState = {
@@ -20,16 +20,46 @@ const initialState = {
 };
 
 export const reducer = (state = initialState, action) => {
+    // console.log("Action (from reducer): ", action);
     switch(action.type){
         case CLICK_ADD:
             console.log("---------");
-            console.log("Reducer selected feature");
-            console.log("Reducer action: ", action);
+            console.log("Reducer selected feature: ", action.payload.name);
+            // console.log("Reducer action: ", action);
             const featureAdded = {
                 ...state,
-                testKey: true
+                car:{
+                    ...state.car,
+                    features:[
+                        ...state.car.features,
+                        action.payload
+                    ]
+                    },
+                additionalFeatures:[
+                    ...state.additionalFeatures.filter(item=>item.id !== action.payload.id)
+                ],
+                additionalPrice:state.additionalPrice + action.payload.price,
             }
+
+            console.log(featureAdded);
             return featureAdded;
+        case CLICK_DELETE:
+            
+            const featureDeleted ={
+                ...state,
+                car:{
+                    ...state.car,
+                    features:[
+                        ...state.car.features.filter(item=>item.id !== action.payload.id)
+                    ]
+                },
+                additionalFeatures:[
+                    ...state.additionalFeatures,
+                    action.payload
+                ],
+                additionalPrice:state.additionalPrice - action.payload.price,
+            }
+            return featureDeleted;
         default:
             console.log("---------");
             console.log("Reducer defaulted");
