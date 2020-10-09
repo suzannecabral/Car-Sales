@@ -5,9 +5,10 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
-//making reducer
-import { useReducer } from "react";
-import { initialState, reducer } from "./components/reducers/carReducer.js";
+//Remove this once redux works:
+// //making reducer
+// import { useReducer } from "react";
+// import { initialState, reducer } from "./components/reducers/carReducer.js";
 
 
 const App = () => {
@@ -28,19 +29,20 @@ const App = () => {
   //   ]
   // };
 
-  //useReducer -----------------------
-  const [state, dispatch] = useReducer(reducer, initialState);
+  //Remove this once redux works:
+  // //useReducer -----------------------
+  // const [state, dispatch] = useReducer(reducer, initialState);
 
 
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <Header />
+        <AddedFeatures />
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
-        <Total car={state.car} additionalPrice={state.additionalPrice} />
+        <AdditionalFeatures />
+        <Total />
       </div>
     </div>
   );
