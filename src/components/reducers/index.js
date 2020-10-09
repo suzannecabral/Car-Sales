@@ -1,7 +1,8 @@
-import { CLICK_ADD } from "../actions/index.js"
+import { CLICK_ADD } from "../actions/index.js";
 
 
 const initialState = {
+        testKey:false,
         additionalPrice: 0,
         car: {
             price: 26395,
@@ -21,10 +22,16 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
     switch(action.type){
         case CLICK_ADD:
-            console.log("Reducer added feature");
+            console.log("---------");
+            console.log("Reducer selected feature");
             console.log("Reducer action: ", action);
-            return state;
+            const featureAdded = {
+                ...state,
+                testKey: true
+            }
+            return featureAdded;
         default:
+            console.log("---------");
             console.log("Reducer defaulted");
             console.log("Reducer action: ", action);
             return state;

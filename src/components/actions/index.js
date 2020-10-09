@@ -1,7 +1,8 @@
 export const CLICK_ADD='CLICK_ADD';
 
 export const clickAdd=(feature)=>{
-    console.log("Actions added feature: ", feature);
+    console.log("---------");
+    console.log("Actions selected feature: ", feature);
     return{
         type:CLICK_ADD,
         payload:feature

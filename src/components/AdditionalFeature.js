@@ -20,6 +20,10 @@ const AdditionalFeature = props => {
   );
 };
 
+// const mapStateToProps = state => {
+//   return {
 
+//   }
+// }
 
 export default connect(null,{clickAdd})(AdditionalFeature);
